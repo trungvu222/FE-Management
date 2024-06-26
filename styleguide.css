@@ -1,0 +1,7 @@
+:root {
+    --defaultwhite: rgba(255, 255, 255, 1);
+    --status-color-success: rgba(40, 167, 69, 1);
+    --status-color-danger: rgba(220, 53, 69, 1);
+    --gray-500: rgba(173, 181, 189, 1);
+    --primarycolor: rgba(119, 73, 248, 1);
+}
