@@ -266,11 +266,72 @@
 
 .frame .group-wrapper {
     position: absolute;
-    width: 1419px;
-    height: 473px;
-    top: 234px;
-    left: 426px;
-    background-color: #d9d9d9;
+    width: 1443px;
+    height: 67px;
+    top: 235px;
+    left: 407px;
+}
+
+.frame .job-table {
+    width: 100%;
+    /* Chiều rộng tối đa */
+    border-collapse: collapse;
+    /* Loại bỏ khoảng cách giữa các ô */
+    table-layout: fixed;
+    /* Cố định layout của bảng */
+}
+
+.frame .job-table th, .job-table td {
+    border: 1px solid #ccc;
+    /* Đường viền cho mỗi ô */
+    padding: 8px 10px;
+    /* Đệm cho nội dung trong ô */
+    text-align: left;
+    /* Căn trái nội dung */
+    background-color: #f9f9f9;
+    /* Màu nền cho ô */
+}
+
+.frame .job-table th {
+    background-color: #f1f1f1;
+    /* Màu nền cho tiêu đề */
+    color: #333;
+    /* Màu chữ cho tiêu đề */
+    font-weight: bold;
+    /* Đậm chữ cho tiêu đề */
+}
+
+.frame .job-table tr:nth-child(even) {
+    background-color: #eee;
+    /* Màu nền cho hàng chẵn */
+}
+
+.frame .job-table th:nth-child(1) {
+    width: 5px;
+}
+
+.frame .job-table th:nth-child(2) {
+    width: 10px;
+}
+
+.frame .job-table th:nth-child(3) {
+    width: 15px;
+}
+
+.frame .job-table th:nth-child(4) {
+    width: 20px;
+}
+
+.frame .job-table th:nth-child(5) {
+    width: 20px;
+}
+
+.frame .job-table th:nth-child(6) {
+    width: 15px;
+}
+
+.frame .job-table th:nth-child(7) {
+    width: 15px;
 }
 
 .frame .group-2 {
@@ -674,9 +735,9 @@
     height: 1024px;
     top: 0;
     left: 0;
-    background-color: #11111140;
-    backdrop-filter: blur(132px) brightness(100%);
+    background-color: rgba(17, 17, 17, 0.25);
     -webkit-backdrop-filter: blur(132px) brightness(100%);
+    backdrop-filter: blur(132px) brightness(100%);
 }
 
 .element .sign-up-overlay {
@@ -730,6 +791,7 @@
 
 .element .text-wrapper-15 {
     position: relative;
+    width: -moz-fit-content;
     width: fit-content;
     right: 80px;
     margin-top: -1300px;
@@ -831,6 +893,7 @@
 
 .element .text-wrapper-16 {
     position: relative;
+    width: -moz-fit-content;
     width: fit-content;
     margin-top: -500px;
     right: 80px;
