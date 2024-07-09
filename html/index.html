@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Management</title>
-    <link rel="stylesheet" href="globals.css">
-    <link rel="stylesheet" href="styleguide.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/globals.css">
+    <link rel="stylesheet" href="/css/styleguide.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -26,8 +26,8 @@
                                     <div class="text-wrapper-2">ADMIN</div>
                                 </div>
                             </div>
-                            <img class="image" src="img/image-1.png" alt="ImageJob" />
-                            <img class="line" src="img/line-11.svg" alt="ImageJob">
+                            <img class="image" src="/img/image-1.png" alt="ImageJob" />
+                            <img class="line" src="/img/line-11.svg" alt="ImageJob">
                         </div>
                     </div>
                     <div class="frame-wrapper">
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="text-wrapper-3">Search: </div>
-                            <button class="button button-2" title="Add Job">+ Add new Job</button>
+                            <button class="button button-2" title="Add Job" onclick="window.location.href='/addjob.html'">+ Add new Job</button>
                         </div>
                     </div>
                 </div>
@@ -56,19 +56,13 @@
                         </thead>
                         <tbody>
                             <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
-                            <!-- Trong phần tạo hàng của bảng -->
-                            <!-- <span id="status-{{jobId}}" style="display:none;">Following</span>
-                            <button id="follow-{{jobId}}" onclick="followJob('{{jobId}}')"
-                                style="display:inline;">Follow</button>
-                            <button id="unfollow-{{jobId}}" onclick="unfollowJob('{{jobId}}')"
-                                style="display:none;">Unfollow</button> -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
