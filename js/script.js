@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Hàm fetchData để lấy dữ liệu mới từ server
   function fetchData() {
-    fetch("http://localhost:8080/status") // Thay thế bằng API thực tế của bạn
+    fetch("http://localhost:8080/status")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       tableBody.removeChild(tableBody.firstChild);
     }
 
-    const dataArray = Array.isArray(data) ? data : [data]; // Ensure data is an array
+    const dataArray = Array.isArray(data) ? data : [data]; // Chắc chắn dữ liệu là 1 mảng
     dataArray.forEach((item, index) => {
       const row = tableBody.insertRow();
       const cell1 = row.insertCell(0);
@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Thiết lập interval để tự động cập nhật dữ liệu mỗi 1 giây
   setInterval(fetchData, 1); // Cập nhật dữ liệu mỗi 1 giây
 
-  // Function to handle follow job
+  // Hàm xử lý follow job
   window.followJob = function(jobId) {
     const followButton = document.getElementById(`follow-${jobId}`);
     const unfollowButton = document.getElementById(`unfollow-${jobId}`);
     const statusSpan = document.getElementById(`status-${jobId}`);
 
-    // Simulate API call to follow the job
+    // API gọi đến follow job
     fetch(`http://localhost:8080/api/follow/${jobId}`, {
       method: "POST",
     })
@@ -78,13 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error following job:", error));
   }
 
-  // Function to handle unfollow job
+  // Hàm xử lý unfollow job
   window.unfollowJob = function(jobId) {
     const followButton = document.getElementById(`follow-${jobId}`);
     const unfollowButton = document.getElementById(`unfollow-${jobId}`);
     const statusSpan = document.getElementById(`status-${jobId}`);
 
-    // Simulate API call to unfollow the job
+    // API gọi đến unfollow job
     fetch(`http://localhost:8080/api/unfollow/${jobId}`, {
       method: "POST",
     })
@@ -161,7 +161,7 @@ function stopJob(jobId) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Job stopped:", data);
-      // Update the job status in the UI
+      // Cập nhật trạng thái công việc trong UI
       document.querySelector(`#job-status-${jobId}`).innerText = "Stopped";
     })
     .catch((error) => console.error("Error stopping job:", error));
