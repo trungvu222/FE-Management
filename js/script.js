@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Gọi hàm fetchData lần đầu khi trang được tải
   fetchData();
 
-  // Thiết lập interval để tự động cập nhật dữ liệu mỗi 1 giây
-  setInterval(fetchData, 5000); // Cập nhật dữ liệu mỗi 1 giây
+  // Thiết lập interval để tự động cập nhật dữ liệu mỗi 5 giây
+  setInterval(fetchData, 5000); // Cập nhật dữ liệu mỗi 5 giây
 
   // Hàm xử lý follow job
   window.followJob = function(jobId) {
